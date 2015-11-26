@@ -8,3 +8,5 @@ overlays
 .project
 .classpath
 .settings
+.DS_Store
+rebel.xml
