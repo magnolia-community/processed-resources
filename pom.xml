@@ -46,7 +46,7 @@
     <dependency>
       <groupId>info.magnolia.resources</groupId>
       <artifactId>magnolia-resources</artifactId>
-      <version>2.4.3-SNAPSHOT</version>
+      <version>${resourcesVersion}</version>
     </dependency>
 
     <dependency>
