@@ -24,6 +24,8 @@
     <magnoliaUiVersion>5.4.4-SNAPSHOT</magnoliaUiVersion>
     <resourcesVersion>2.4.3-SNAPSHOT</resourcesVersion>
     <javaVersion>1.7</javaVersion>
+
+    <scmTagPrefix>magnolia-processed-resources-app</scmTagPrefix>
   </properties>
 
   <dependencies>
