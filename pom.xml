@@ -20,9 +20,9 @@
   </scm>
 
   <properties>
-    <magnoliaVersion>5.4.4-SNAPSHOT</magnoliaVersion>
-    <magnoliaUiVersion>5.4.4-SNAPSHOT</magnoliaUiVersion>
-    <resourcesVersion>2.4.3-SNAPSHOT</resourcesVersion>
+    <magnoliaVersion>5.4.4</magnoliaVersion>
+    <magnoliaUiVersion>5.4.4</magnoliaUiVersion>
+    <resourcesVersion>2.4.3</resourcesVersion>
     <javaVersion>1.7</javaVersion>
 
     <scmTagPrefix>magnolia-processed-resources-app</scmTagPrefix>
