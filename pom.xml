@@ -98,4 +98,11 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <site>
+      <id>${distribSiteId}</id>
+      <url>${distribSiteRoot}/magnolia-processed-resources-app/${project.version}/</url>
+    </site>
+  </distributionManagement>
 </project>
