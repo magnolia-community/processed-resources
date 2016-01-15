@@ -12,6 +12,13 @@
   <version>1.0-SNAPSHOT</version>
   <name>Processed Resources App Module</name>
 
+  <scm>
+    <connection>scm:git:ssh://git@git.magnolia-cms.com/FORGE/processed-resources</connection>
+    <developerConnection>scm:git:ssh://git@git.magnolia-cms.com/FORGE/processed-resources</developerConnection>
+    <url>https://git.magnolia-cms.com/projects/FORGE/repos/processed-resources</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <properties>
     <magnoliaVersion>5.4.4-SNAPSHOT</magnoliaVersion>
     <magnoliaUiVersion>5.4.4-SNAPSHOT</magnoliaUiVersion>
