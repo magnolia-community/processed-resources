@@ -99,6 +99,19 @@
     </dependency>
   </dependencies>
 
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <configuration>
+            <useManifestOnlyJar>false</useManifestOnlyJar>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
   <distributionManagement>
     <site>
       <id>${distribSiteId}</id>
