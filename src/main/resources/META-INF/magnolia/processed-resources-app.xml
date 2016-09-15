@@ -4,6 +4,7 @@
   <name>processed-resources-app</name>
   <displayName>${project.name}</displayName>
   <description>${project.description}</description>
+  <versionHandler>info.magnolia.module.resources.app.setup.ProcessedResourcesAppVersionHandler</versionHandler>
   <version>${project.version}</version>
 
   <dependencies>
