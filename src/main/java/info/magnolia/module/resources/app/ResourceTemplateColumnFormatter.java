@@ -83,11 +83,14 @@ public class ResourceTemplateColumnFormatter extends AbstractColumnFormatter<Res
             try {
                 if (NodeUtil.isNodeType(node, NodeTypes.Content.NAME)) {
                     String resourceType = StringUtils.substringAfter(Renderable.getTemplate(node), ResourceTypes.RESOURCES_PREFIX);
-                    if (ResourceTypes.BINARY_SUFFIX.equals(resourceType) && node.hasNode(ResourceTypes.BINARY_SUFFIX) && node.getNode(ResourceTypes.BINARY_SUFFIX).hasProperty("extension")) {
-                        return simpleTranslator.translate("processed-resources.content.mgnl-template.options.binary.extension", node.getNode(ResourceTypes.BINARY_SUFFIX).getProperty("extension").getString());
-                    }
                     if (NodeUtil.hasMixin(node, NodeTypes.Deleted.NAME)) {
                         return simpleTranslator.translate("processed-resources.content.mgnl-template.options.deleted");
+                    }
+                    if (resourceType == null) {
+                        return simpleTranslator.translate("processed-resources.content.mgnl-template.options.noTemplate");
+                    }
+                    if (ResourceTypes.BINARY_SUFFIX.equals(resourceType) && node.hasNode(ResourceTypes.BINARY_SUFFIX) && node.getNode(ResourceTypes.BINARY_SUFFIX).hasProperty("extension")) {
+                        return simpleTranslator.translate("processed-resources.content.mgnl-template.options.binary.extension", node.getNode(ResourceTypes.BINARY_SUFFIX).getProperty("extension").getString());
                     }
                     return simpleTranslator.translate("processed-resources.content.mgnl-template.options." + resourceType);
                 }

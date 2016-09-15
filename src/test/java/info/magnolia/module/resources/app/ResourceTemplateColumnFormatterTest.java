@@ -132,4 +132,24 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
         verify(simpleTranslator).translate("processed-resources.content.mgnl-template.options.deleted");
     }
 
+    @Test
+    public void testGenerateCellForResourceWithoutTemplate() throws Exception {
+        // GIVEN
+        ResourceTemplateColumnFormatter resourceNameColumnFormatter = new ResourceTemplateColumnFormatter(new ResourceColumnDefinition(), simpleTranslator);
+        Table table = mock(Table.class);
+        Node jcrNode = session.getRootNode().addNode("foo", NodeTypes.Content.NAME);
+
+        String expectedValue = "no template";
+        when(simpleTranslator.translate("processed-resources.content.mgnl-template.options.noTemplate")).thenReturn(expectedValue);
+
+        Item item = new JcrNodeAdapter(jcrNode);
+        when(table.getItem("itemId")).thenReturn(item);
+
+        // WHEN
+        String name = (String) resourceNameColumnFormatter.generateCell(table, "itemId", "columnId");
+
+        // THEN
+        assertEquals(expectedValue, name);
+    }
+
 }
