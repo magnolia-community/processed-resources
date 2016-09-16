@@ -36,6 +36,8 @@ package info.magnolia.module.resources.app.setup;
 import info.magnolia.module.DefaultModuleVersionHandler;
 import info.magnolia.module.delta.ArrayDelegateTask;
 import info.magnolia.module.delta.DeltaBuilder;
+import info.magnolia.module.delta.NodeExistsDelegateTask;
+import info.magnolia.module.delta.RemoveNodeTask;
 
 /**
  * Version handler for Processed resources app module.
@@ -49,6 +51,12 @@ public class ProcessedResourcesAppVersionHandler extends DefaultModuleVersionHan
                         new AddIsFolderOrHasTemplateAvailabilityRuleTask("", "", "editResource"),
                         new AddIsFolderOrHasTemplateAvailabilityRuleTask("", "", "editTemplate"),
                         new AddIsFolderOrHasTemplateAvailabilityRuleTask("", "", "showVersions")))
+                .addTask(new NodeExistsDelegateTask("", "/modules/processed-resources-app/apps/processed-resources/subApps/generic/base/editor/form/tabs/content/fields/mgnl-template/options/yaml",
+                        new RemoveNodeTask("Remove YAML option from the app",
+                                "/modules/processed-resources-app/apps/processed-resources/subApps/generic/base/editor/form/tabs/content/fields/mgnl-template/options/yaml")))
+                .addTask(new NodeExistsDelegateTask("", "/modules/processed-resources-app/dialogs/newResource/form/tabs/content/fields/mgnl-template/options/yaml",
+                        new RemoveNodeTask("Remove YAML from newResource dialog",
+                                "/modules/processed-resources-app/dialogs/newResource/form/tabs/content/fields/mgnl-template/options/yaml")))
         );
     }
 }

@@ -34,9 +34,12 @@
 package info.magnolia.module.resources.app.setup;
 
 import static info.magnolia.test.hamcrest.NodeMatchers.hasNode;
+import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import info.magnolia.context.MgnlContext;
+import info.magnolia.jcr.util.NodeTypes;
+import info.magnolia.jcr.util.NodeUtil;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
@@ -84,16 +87,23 @@ public class ProcessedResourcesAppVersionHandlerTest extends ModuleVersionHandle
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
         Node actions = configSession.getNode("/modules/processed-resources-app/apps/processed-resources/subApps/browser/actions");
+        Node options = configSession.getNode("/modules/processed-resources-app/dialogs/newResource/form/tabs/content/fields/mgnl-template/options");
 
         // THEN
         assertThat(actions, hasNode("addResource/availability/rules/IsFolderOrHasTemplateRule"));
         assertThat(actions, hasNode("editResource/availability/rules/IsFolderOrHasTemplateRule"));
         assertThat(actions, hasNode("editTemplate/availability/rules/IsFolderOrHasTemplateRule"));
         assertThat(actions, hasNode("showVersions/availability/rules/IsFolderOrHasTemplateRule"));
+        assertThat(options, not(hasNode("yaml")));
     }
 
     @Test
     public void updateFrom101UpdatesActionsAvailabilityRulesWithHasPermissionRule() throws Exception {
+        // GIVEN
+        Node options = NodeUtil.createPath(configSession.getRootNode(), "/modules/processed-resources-app/dialogs/newResource/form/tabs/content/fields/mgnl-template/options", NodeTypes.ContentNode.NAME, true);
+        options.addNode("yaml", NodeTypes.ContentNode.NAME);
+        options.save();
+
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.0.1"));
         Node actions = configSession.getNode("/modules/processed-resources-app/apps/processed-resources/subApps/browser/actions");
@@ -103,5 +113,6 @@ public class ProcessedResourcesAppVersionHandlerTest extends ModuleVersionHandle
         assertThat(actions, hasNode("editResource/availability/rules/IsFolderOrHasTemplateRule"));
         assertThat(actions, hasNode("editTemplate/availability/rules/IsFolderOrHasTemplateRule"));
         assertThat(actions, hasNode("showVersions/availability/rules/IsFolderOrHasTemplateRule"));
+        assertThat(options, not(hasNode("yaml")));
     }
 }
