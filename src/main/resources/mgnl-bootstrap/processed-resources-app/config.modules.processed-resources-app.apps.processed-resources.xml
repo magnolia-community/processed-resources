@@ -340,6 +340,44 @@
                   <sv:value>superuser</sv:value>
                 </sv:property>
               </sv:node>
+              <sv:node sv:name="IsFolderOrHasTemplateRule">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                  <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+                  <sv:value>mix:lockable</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:uuid" sv:type="String">
+                  <sv:value>e9110231-12e1-493f-8495-bef09d098547</sv:value>
+                </sv:property>
+                <sv:property sv:name="implementationClass" sv:type="String">
+                  <sv:value>info.magnolia.module.resources.app.availability.IsFolderOrHasTemplateRule</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:createdBy" sv:type="String">
+                  <sv:value>admin</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+                  <sv:value>false</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:created" sv:type="Date">
+                  <sv:value>2016-09-15T13:06:32.522+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:createdBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+                  <sv:value>2016-09-15T13:06:32.523+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+                  <sv:value>2016-09-15T13:06:49.303+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+              </sv:node>
             </sv:node>
           </sv:node>
         </sv:node>
@@ -484,6 +522,44 @@
                 </sv:property>
                 <sv:property sv:name="mgnl:lastModified" sv:type="Date">
                   <sv:value>2016-08-09T10:33:36.647+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+              </sv:node>
+              <sv:node sv:name="IsFolderOrHasTemplateRule">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                  <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+                  <sv:value>mix:lockable</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:uuid" sv:type="String">
+                  <sv:value>37ed213e-5121-43dc-9830-b6bc5d45b94c</sv:value>
+                </sv:property>
+                <sv:property sv:name="implementationClass" sv:type="String">
+                  <sv:value>info.magnolia.module.resources.app.availability.IsFolderOrHasTemplateRule</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:createdBy" sv:type="String">
+                  <sv:value>admin</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+                  <sv:value>false</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:created" sv:type="Date">
+                  <sv:value>2016-09-15T13:06:51.437+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:createdBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+                  <sv:value>2016-09-15T13:06:51.438+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+                  <sv:value>2016-09-15T13:06:59.599+02:00</sv:value>
                 </sv:property>
                 <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
                   <sv:value>superuser</sv:value>
@@ -2427,6 +2503,44 @@
                   <sv:value>superuser</sv:value>
                 </sv:property>
               </sv:node>
+              <sv:node sv:name="IsFolderOrHasTemplateRule">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                  <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+                  <sv:value>mix:lockable</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:uuid" sv:type="String">
+                  <sv:value>1695d496-f1fb-4a36-99a0-7dd4ec23a73d</sv:value>
+                </sv:property>
+                <sv:property sv:name="implementationClass" sv:type="String">
+                  <sv:value>info.magnolia.module.resources.app.availability.IsFolderOrHasTemplateRule</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:createdBy" sv:type="String">
+                  <sv:value>admin</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+                  <sv:value>false</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:created" sv:type="Date">
+                  <sv:value>2016-09-21T13:14:32.383+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:createdBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+                  <sv:value>2016-09-21T13:14:32.384+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+                  <sv:value>2016-09-21T13:14:45.173+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+              </sv:node>
             </sv:node>
           </sv:node>
           <sv:node sv:name="subAppMapping">
@@ -2647,6 +2761,44 @@
                 </sv:property>
                 <sv:property sv:name="mgnl:lastModified" sv:type="Date">
                   <sv:value>2016-08-09T10:33:36.647+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+              </sv:node>
+              <sv:node sv:name="IsFolderOrHasTemplateRule">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                  <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+                  <sv:value>mix:lockable</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:uuid" sv:type="String">
+                  <sv:value>8d086818-588a-450d-8e67-59e0609e3e72</sv:value>
+                </sv:property>
+                <sv:property sv:name="implementationClass" sv:type="String">
+                  <sv:value>info.magnolia.module.resources.app.availability.IsFolderOrHasTemplateRule</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:createdBy" sv:type="String">
+                  <sv:value>admin</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+                  <sv:value>false</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:created" sv:type="Date">
+                  <sv:value>2016-09-21T16:31:48.199+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:createdBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+                  <sv:value>2016-09-21T16:31:48.200+02:00</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+                  <sv:value>superuser</sv:value>
+                </sv:property>
+                <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+                  <sv:value>2016-09-21T16:31:55.670+02:00</sv:value>
                 </sv:property>
                 <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
                   <sv:value>superuser</sv:value>
@@ -9566,41 +9718,6 @@
                         </sv:property>
                         <sv:property sv:name="value" sv:type="String">
                           <sv:value>resources:processedHtml</sv:value>
-                        </sv:property>
-                      </sv:node>
-                      <sv:node sv:name="yaml">
-                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-                          <sv:value>mgnl:contentNode</sv:value>
-                        </sv:property>
-                        <sv:property sv:name="jcr:uuid" sv:type="String">
-                          <sv:value>1f6ae4f0-dc38-4093-98d2-a4fafc7ed1b4</sv:value>
-                        </sv:property>
-                        <sv:property sv:name="jcr:createdBy" sv:type="String">
-                          <sv:value>admin</sv:value>
-                        </sv:property>
-                        <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
-                          <sv:value>false</sv:value>
-                        </sv:property>
-                        <sv:property sv:name="mgnl:created" sv:type="Date">
-                          <sv:value>2016-08-09T10:33:17.683+02:00</sv:value>
-                        </sv:property>
-                        <sv:property sv:name="mgnl:createdBy" sv:type="String">
-                          <sv:value>superuser</sv:value>
-                        </sv:property>
-                        <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-                          <sv:value>2016-08-09T10:33:18.070+02:00</sv:value>
-                        </sv:property>
-                        <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
-                          <sv:value>superuser</sv:value>
-                        </sv:property>
-                        <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-                          <sv:value>2016-08-09T10:33:36.647+02:00</sv:value>
-                        </sv:property>
-                        <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
-                          <sv:value>superuser</sv:value>
-                        </sv:property>
-                        <sv:property sv:name="value" sv:type="String">
-                          <sv:value>resources:yaml</sv:value>
                         </sv:property>
                       </sv:node>
                     </sv:node>

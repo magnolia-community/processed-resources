@@ -59,6 +59,8 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
 
     private Session session;
     private SimpleTranslator simpleTranslator;
+    private ResourceTemplateColumnFormatter resourceNameColumnFormatter;
+    private final Table table = mock(Table.class);
 
     @Override
     @Before
@@ -69,18 +71,18 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
         session = new MockSession("resources");
         ctx.addSession("resources", session);
         simpleTranslator = mock(SimpleTranslator.class);
+
+        resourceNameColumnFormatter = new ResourceTemplateColumnFormatter(new ResourceColumnDefinition(), simpleTranslator);
     }
 
     @Test
     public void testGenerateCell() throws Exception {
         // GIVEN
-        ResourceTemplateColumnFormatter resourceNameColumnFormatter = new ResourceTemplateColumnFormatter(new ResourceColumnDefinition(), simpleTranslator);
-        Table table = mock(Table.class);
         Node jcrNode = session.getRootNode().addNode("foo", NodeTypes.Content.NAME);
         Renderable.set(jcrNode, "resources:bar");
 
         String expectedValue = "Bar";
-        when(simpleTranslator.translate("resources.content.mgnl-template.options.bar")).thenReturn(expectedValue);
+        when(simpleTranslator.translate("processed-resources.content.mgnl-template.options.bar")).thenReturn(expectedValue);
 
         Item item = new JcrNodeAdapter(jcrNode);
         when(table.getItem("itemId")).thenReturn(item);
@@ -95,14 +97,12 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
     @Test
     public void testGenerateCellForBinaryResource() throws Exception {
         // GIVEN
-        ResourceTemplateColumnFormatter resourceNameColumnFormatter = new ResourceTemplateColumnFormatter(new ResourceColumnDefinition(), simpleTranslator);
-        Table table = mock(Table.class);
         Node jcrNode = session.getRootNode().addNode("image", NodeTypes.Content.NAME);
         Renderable.set(jcrNode, "resources:binary");
         jcrNode.addNode(ResourceTypes.BINARY_SUFFIX).setProperty("extension", "png");
 
         String expectedValue = "Binary/png";
-        when(simpleTranslator.translate("resources.content.mgnl-template.options.binary.extension", "png")).thenReturn(expectedValue);
+        when(simpleTranslator.translate("processed-resources.content.mgnl-template.options.binary.extension", "png")).thenReturn(expectedValue);
 
         Item item = new JcrNodeAdapter(jcrNode);
         when(table.getItem("itemId")).thenReturn(item);
@@ -117,8 +117,6 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
     @Test
     public void testGenerateCellDeleted() throws Exception {
         // GIVEN
-        ResourceTemplateColumnFormatter resourceNameColumnFormatter = new ResourceTemplateColumnFormatter(new ResourceColumnDefinition(), simpleTranslator);
-        Table table = mock(Table.class);
         Node jcrNode = session.getRootNode().addNode("foo", NodeTypes.Content.NAME);
         jcrNode.addMixin("mgnl:deleted");
 
@@ -129,7 +127,25 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
         resourceNameColumnFormatter.generateCell(table, "itemId", "columnId");
 
         // THEN
-        verify(simpleTranslator).translate("resources.content.mgnl-template.options.deleted");
+        verify(simpleTranslator).translate("processed-resources.content.mgnl-template.options.deleted");
+    }
+
+    @Test
+    public void testGenerateCellForResourceWithoutTemplate() throws Exception {
+        // GIVEN
+        Node jcrNode = session.getRootNode().addNode("foo", NodeTypes.Content.NAME);
+
+        String expectedValue = "no template";
+        when(simpleTranslator.translate("processed-resources.content.mgnl-template.options.noTemplate")).thenReturn(expectedValue);
+
+        Item item = new JcrNodeAdapter(jcrNode);
+        when(table.getItem("itemId")).thenReturn(item);
+
+        // WHEN
+        String name = (String) resourceNameColumnFormatter.generateCell(table, "itemId", "columnId");
+
+        // THEN
+        assertEquals(expectedValue, name);
     }
 
 }
