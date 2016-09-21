@@ -59,6 +59,8 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
 
     private Session session;
     private SimpleTranslator simpleTranslator;
+    private ResourceTemplateColumnFormatter resourceNameColumnFormatter;
+    private final Table table = mock(Table.class);
 
     @Override
     @Before
@@ -69,13 +71,13 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
         session = new MockSession("resources");
         ctx.addSession("resources", session);
         simpleTranslator = mock(SimpleTranslator.class);
+
+        resourceNameColumnFormatter = new ResourceTemplateColumnFormatter(new ResourceColumnDefinition(), simpleTranslator);
     }
 
     @Test
     public void testGenerateCell() throws Exception {
         // GIVEN
-        ResourceTemplateColumnFormatter resourceNameColumnFormatter = new ResourceTemplateColumnFormatter(new ResourceColumnDefinition(), simpleTranslator);
-        Table table = mock(Table.class);
         Node jcrNode = session.getRootNode().addNode("foo", NodeTypes.Content.NAME);
         Renderable.set(jcrNode, "resources:bar");
 
@@ -95,8 +97,6 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
     @Test
     public void testGenerateCellForBinaryResource() throws Exception {
         // GIVEN
-        ResourceTemplateColumnFormatter resourceNameColumnFormatter = new ResourceTemplateColumnFormatter(new ResourceColumnDefinition(), simpleTranslator);
-        Table table = mock(Table.class);
         Node jcrNode = session.getRootNode().addNode("image", NodeTypes.Content.NAME);
         Renderable.set(jcrNode, "resources:binary");
         jcrNode.addNode(ResourceTypes.BINARY_SUFFIX).setProperty("extension", "png");
@@ -117,8 +117,6 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
     @Test
     public void testGenerateCellDeleted() throws Exception {
         // GIVEN
-        ResourceTemplateColumnFormatter resourceNameColumnFormatter = new ResourceTemplateColumnFormatter(new ResourceColumnDefinition(), simpleTranslator);
-        Table table = mock(Table.class);
         Node jcrNode = session.getRootNode().addNode("foo", NodeTypes.Content.NAME);
         jcrNode.addMixin("mgnl:deleted");
 
@@ -135,8 +133,6 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
     @Test
     public void testGenerateCellForResourceWithoutTemplate() throws Exception {
         // GIVEN
-        ResourceTemplateColumnFormatter resourceNameColumnFormatter = new ResourceTemplateColumnFormatter(new ResourceColumnDefinition(), simpleTranslator);
-        Table table = mock(Table.class);
         Node jcrNode = session.getRootNode().addNode("foo", NodeTypes.Content.NAME);
 
         String expectedValue = "no template";
