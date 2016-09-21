@@ -25,6 +25,8 @@
     <resourcesVersion>2.4.3</resourcesVersion>
     <javaVersion>1.7</javaVersion>
 
+    <cloverCoverageThreshold>45</cloverCoverageThreshold>
+
     <scmTagPrefix>magnolia-processed-resources-app</scmTagPrefix>
   </properties>
 
