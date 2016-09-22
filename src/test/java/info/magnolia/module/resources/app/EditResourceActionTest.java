@@ -74,7 +74,7 @@ public class EditResourceActionTest extends MgnlTestCase {
     }
 
     @Test
-    public void testOpenSubAppForTemplateName() throws Exception {
+    public void openSubAppForTemplateName() throws Exception {
         // GIVEN
         MockLocationController locationController = new MockLocationController(null, null);
         Node jcrNode = session.getRootNode().addNode("image", NodeTypes.Content.NAME);
