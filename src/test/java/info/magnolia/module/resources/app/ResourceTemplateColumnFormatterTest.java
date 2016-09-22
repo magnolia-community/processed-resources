@@ -76,7 +76,7 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
     }
 
     @Test
-    public void testGenerateCell() throws Exception {
+    public void generateCell() throws Exception {
         // GIVEN
         Node jcrNode = session.getRootNode().addNode("foo", NodeTypes.Content.NAME);
         Renderable.set(jcrNode, "resources:bar");
@@ -95,7 +95,7 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
     }
 
     @Test
-    public void testGenerateCellForBinaryResource() throws Exception {
+    public void generateCellForBinaryResource() throws Exception {
         // GIVEN
         Node jcrNode = session.getRootNode().addNode("image", NodeTypes.Content.NAME);
         Renderable.set(jcrNode, "resources:binary");
@@ -115,7 +115,7 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
     }
 
     @Test
-    public void testGenerateCellDeleted() throws Exception {
+    public void generateCellDeleted() throws Exception {
         // GIVEN
         Node jcrNode = session.getRootNode().addNode("foo", NodeTypes.Content.NAME);
         jcrNode.addMixin("mgnl:deleted");
@@ -131,7 +131,7 @@ public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
     }
 
     @Test
-    public void testGenerateCellForResourceWithoutTemplate() throws Exception {
+    public void generateCellForResourceWithoutTemplate() throws Exception {
         // GIVEN
         Node jcrNode = session.getRootNode().addNode("foo", NodeTypes.Content.NAME);
 
