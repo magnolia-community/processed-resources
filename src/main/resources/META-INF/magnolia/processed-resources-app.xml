@@ -10,15 +10,15 @@
   <dependencies>
     <dependency>
       <name>core</name>
-      <version>5.4.3/*</version>
+      <version>${magnoliaVersion}/*</version>
     </dependency>
     <dependency>
       <name>ui-contentapp</name>
-      <version>5.4.3/*</version>
+      <version>${magnoliaUiVersion}/*</version>
     </dependency>
     <dependency>
       <name>resources</name>
-      <version>2.4.3/*</version>
+      <version>${resourcesVersion}/*</version>
     </dependency>
   </dependencies>
 </module>
