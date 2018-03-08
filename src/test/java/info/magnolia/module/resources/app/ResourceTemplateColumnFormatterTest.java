@@ -52,8 +52,8 @@ import javax.jcr.Session;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.vaadin.data.Item;
-import com.vaadin.ui.Table;
+import com.vaadin.v7.data.Item;
+import com.vaadin.v7.ui.Table;
 
 public class ResourceTemplateColumnFormatterTest extends MgnlTestCase {
 
