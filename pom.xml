@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd ">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>info.magnolia.maven.poms-forge</groupId>
-    <artifactId>magnolia-parent-pom-forge</artifactId>
-    <version>32</version>
+    <groupId>info.magnolia.maven.poms</groupId>
+    <artifactId>magnolia-parent-pom-community</artifactId>
+    <version>36</version>
   </parent>
 
   <groupId>info.magnolia.resources</groupId>
