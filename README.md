@@ -1,13 +1,24 @@
-# Legacy (processed) resources app info
+# Processed resources
 
-Since Resources 2.4 (Magnolia 5.4), the JCR-based resources app is deprecated.
-This deprecation affects all classes within package **info.magnolia.module.resources.app**.
+[![Build Status](https://travis-ci.com/magnolia-community/processed-resources.svg?branch=master)](https://travis-ci.com/magnolia-community/processed-resources) [![Magnolia compatibility](https://img.shields.io/badge/magnolia-5.6-brightgreen.svg)](https://www.magnolia-cms.com)
 
-Instead, the new resources-app lists all resources across classpath, file-system and the JCR 'resources' workspace.
-This emphasizes the unified loading cascade, simplified structure of magnolia modules, including e.g. template scripts and configuration files.
-The new app resides within package **info.magnolia.resources.app** in magnolia-resources module.
+This module lets you store resources in the old, Magnolia 5.4 way, which 
+enables you to run FTL processing on CSS and JS.
 
-For further information:
+## Installing
 
-* Resources: https://documentation.magnolia-cms.com/display/DOCS/Resources
-* Modules: https://documentation.magnolia-cms.com/display/DOCS/Modules
+Add the following dependency to your Maven project:
+
+    <dependency>
+      <groupId>info.magnolia.resources</groupId>
+      <artifactId>magnolia-processed-resources-app</artifactId>
+      <version>1.1</version>
+    </dependency>
+
+## Configuration
+
+…
+
+## License
+
+…
