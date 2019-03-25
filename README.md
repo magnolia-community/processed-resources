@@ -21,15 +21,15 @@ This module provides and installs a new 'Processed Resources' app which allows y
 For full documentation on this feature, please consult the Magnolia 5.3 Resources documentation: https://documentation.magnolia-cms.com/display/DOCS53/Resources
 
 Processed Resources App
-![Processed Resources App](https://wiki.magnolia-cms.com/download/attachments/176799623/proc-rec-app-browser.png?version=1&modificationDate=1553510490000&api=v2)
+![Processed Resources App](https://wiki.magnolia-cms.com/download/attachments/176799623/proc-rec-app-browser.jpg?version=1&modificationDate=1553514994000&api=v2)
 
 
 Processed Resources App - Editor
-![Processed Resources App - Editor](https://wiki.magnolia-cms.com/download/attachments/176799623/proc-rec-app-editor.png?version=1&modificationDate=1553510508000&api=v2)
+![Processed Resources App - Editor](https://wiki.magnolia-cms.com/download/attachments/176799623/proc-rec-app-editor.jpg?version=1&modificationDate=1553510508000&api=v2)
 
 
 Example of a resource that has been processed
-![Processed Image](https://wiki.magnolia-cms.com/download/attachments/176799623/proc-rec-rendered.png?version=1&modificationDate=1553510533000&api=v2)
+![Processed Image](https://wiki.magnolia-cms.com/download/attachments/176799623/proc-rec-rendered.jpg?version=1&modificationDate=1553510533000&api=v2)
 
 
 
